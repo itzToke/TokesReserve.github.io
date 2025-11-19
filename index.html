@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Toke's Delight - 10 Pack $50 | Tokes Reserve</title>
+  <meta name="description" content="Exclusive heirloom souvenir seeds - Toke's Delight 10 pack. Adult novelty collectible.">
+  
+  <!-- Snipcart CSS + JS (free cart system) -->
+  <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.css" />
+  <script async src="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.js"></script>
+  
+  <style>
+    :root { --green: #2e8b57; --dark: #111; }
+    body {margin:0; font-family:'Helvetica Neue',Arial,sans-serif; background:#000; color:#fff;}
+    a {color:var(--green); text-decoration:none;}
+    .header {background:#000; padding:15px; text-align:center; border-bottom:1px solid #333; position:relative;}
+    .cart-button {position:absolute; right:20px; top:15px;}
+    .hero {background:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url('https://i.imgur.com/8Y7kJ2v.jpg') center/cover; padding:160px 20px; text-align:center;}
+    .container {max-width:1200px; margin:auto; padding:60px 20px;}
+    .product-grid {display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start;}
+    .images img.main {width:100%; border-radius:16px; box-shadow:0 20px 40px rgba(0,0,0,0.8);}
+    .details h1 {font-size:56px; margin:0 0 10px; color:var(--green);}
+    .price {font-size:60px; color:var(--green); font-weight:bold; margin:20px 0;}
+    .snipcart-add-item {background:var(--green); color:white; padding:20px 40px; font-size:24px; border:none; border-radius:12px; cursor:pointer; width:100%; margin:30px 0;}
+    .disclaimer {background:#1a1a1a; padding:30px; border-radius:12px; margin:40px 0; font-size:15px; color:#aaa;}
+    footer {text-align:center; padding:80px 20px; color:#666;}
+    @media (max-width:968px) {.product-grid {grid-template-columns:1fr;}}
+  </style>
+</head>
+<body>
+
+  <!-- 21+ Age Gate -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script>
+    if (!localStorage.getItem('toke21')) {
+      Swal.fire({
+        title: "21+ Only",
+        html: "Adult novelty souvenirs.<br>You must be 21+ to enter.",
+        icon: "warning",
+        background: "#000",
+        color: "#fff",
+        confirmButtonText: "I am 21+",
+        confirmButtonColor: "#2e8b57",
+        allowOutsideClick: false
+      }).then((r) => {
+        if (r.isConfirmed) localStorage.setItem('toke21', 'yes');
+        else location.href = "https://google.com";
+      });
+    }
+  </script>
+
+  <!-- Snipcart Hidden Config (FREE API KEY WORKS FOR TESTING) -->
+  <div hidden id="snipcart" data-api-key=NmNjZWFlYjEtOGJjYS00OTFjLWE0YTEtOTI5ZWE5N2NhYjMwNjM4OTkxMjg3MTM0NTA1NDI0 data-config-modal-style="dark">
+    <billing section="bottom">
+      <template>
+        <p style="font-size:18px; color:#2e8b57; text-align:center;">
+          <strong>TOKES RESERVE CHECKOUT</strong><br><br>
+          Pay with: Crypto • CashApp $TokesReserve • Zelle/PayPal: orders@tokesreserve.com<br><br>
+          After payment → email receipt + address to orders@tokesreserve.com
+        </template>
+      </billing>
+    </div>
+
+  <div class="header">
+    <h2>TOKES RESERVE</h2>
+    <div class="cart-button snipcart-checkout" style="cursor:pointer; color:var(--green); font-size:24px;">
+      🛒 <span class="snipcart-items-count"></span> items (<span class="snipcart-total-price">$0.00</span>)
+    </div>
+  </div>
+
+  <div class="hero">
+    <h1>TOKE'S DELIGHT</h1>
+    <p style="font-size:28px;">Exclusive Heirloom Souvenir Pack</p>
+  </div>
+
+  <div class="container">
+    <div class="product-grid">
+      <div class="images">
+        <img class="main" src="https://i.imgur.com/8Y7kJ2v.jpg" alt="Toke's Delight">
+      </div>
+
+      <div class="details">
+        <h1>Toke's Delight</h1>
+        <p><strong>10 Regular Souvenir Seeds</strong></p>
+        <div class="price">$50 USD</div>
+
+        <!-- REAL ADD TO CART BUTTON -->
+        <button class="snipcart-add-item"
+          data-item-id="tokes-delight"
+          data-item-price="50.00"
+          data-item-url="/"
+          data-item-name="Toke's Delight - 10 Pack Souvenir Seeds"
+          data-item-description="Exclusive heirloom novelty collectible">
+          ADD TO CART → BUY NOW
+        </button>
+
+        <div class="disclaimer">
+          <strong>LEGAL DISCLAIMER</strong><br>
+          Sold strictly as adult novelty souvenirs for genetic preservation only.<br>
+          Germination prohibited and illegal in most areas. 21+ only.
+        </div>
+
+        <p>Limited stock • Free bonus seeds with every order • Discreet worldwide shipping</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Tokes Reserve – Heirloom Souvenir Seeds Only</p>
+  </footer>
+</body>
+</html>

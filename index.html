@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tokes Reserve | Heirloom Cannabis Genetics Souvenirs</title>
+  <meta name="description" content="Preserving rare heirloom cannabis strains as novelty collectibles.">
+  <style>
+    :root { --green: #2e8b57; }
+    body {margin:0; font-family:'Segoe UI',Arial,sans-serif; background:#000; color:#fff; line-height:1.6;}
+    .hero {padding:120px 20px 80px; text-align:center; background:linear-gradient(to bottom,#111,#000);}
+    h1 {font-size:64px; margin:0; color:var(--green);}
+    .tagline {font-size:28px; margin:20px 0 40px;}
+    .disclaimer {max-width:900px; margin:0 auto 50px; color:#aaa; font-size:18px;}
+    .shop {padding:60px 20px; max-width:1400px; margin:auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:40px;}
+    .card {background:#111; border-radius:16px; padding:30px; border:1px solid #333; transition:0.3s;}
+    .card:hover {transform:translateY(-10px); border-color:var(--green);}
+    .price {font-size:36px; color:var(--green); font-weight:bold;}
+    .buy-btn {background:var(--green); color:white; border:none; padding:16px 32px; font-size:20px; cursor:pointer; border-radius:12px; width:100%; margin-top:20px;}
+    footer {padding:60px 20px; text-align:center; color:#666; font-size:15px;}
+    @media (max-width:768px) { h1 {font-size:48px;} .tagline {font-size:22px;} }
+  </style>
+</head>
+<body>
+
+  <!-- 21+ Age Gate -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script>
+    if (!localStorage.getItem('tokes21')) {
+      Swal.fire({
+        title: "21+ Only",
+        html: "This website contains <strong>adult novelty souvenirs</strong>.<br>You must be 21 years or older to enter.",
+        icon: "warning",
+        background: "#000",
+        color: "#fff",
+        confirmButtonText: "I am 21+ →",
+        confirmButtonColor: "#2e8b57",
+        allowOutsideClick: false,
+        allowEscapeKey: false
+      }).then((r) => {
+        if (r.isConfirmed) localStorage.setItem('tokes21', 'verified');
+        else location.href = "https://google.com";
+      });
+    }
+  </script>
+
+  <div class="hero">
+    <h1>TOKES RESERVE</h1>
+    <p class="tagline">Heirloom Cannabis Genetics Preservation Vault</p>
+    <div class="disclaimer">
+      <strong>All seeds sold strictly as adult novelty souvenirs & genetic preservation collectibles only.</strong><br>
+      Germination or cultivation is illegal in many jurisdictions. You must be 21+ and responsible for knowing your local laws.
+    </div>
+  </div>
+
+  <div class="shop">
+    <!-- Repeat this card for each strain -->
+    <div class="card">
+      <h2>Afghan Kush 1970s Landrace</h2>
+      <p>10 Regular Souvenir Seeds</p>
+      <p class="price">$89</p>
+      <p>Pure indica heirloom • Novelty only</p>
+      <button class="buy-btn" onclick="buy('Afghan Kush $89')">Buy with Crypto / CashApp / Zelle</button>
+    </div>
+
+    <div class="card">
+      <h2>Durban Poison (Pure Sativa)</h2>
+      <p>10 Regular Souvenir Seeds</p>
+      <p class="price">$99</p>
+      <p>South African landrace • Collectible</p>
+      <button class="buy-btn" onclick="buy('Durban $99')">Buy Now</button>
+    </div>
+
+    <div class="card">
+      <h2>Panama Red 1970s</h2>
+      <p>10 Regular Souvenir Seeds</p>
+      <p class="price">$109</p>
+      <p>Legendary psychedelic sativa</p>
+      <button class="buy-btn" onclick="buy('Panama Red $109')">Buy Now</button>
+    </div>
+
+    <div class="card">
+      <h2>Acapulco Gold</h2>
+      <p>10 Regular Souvenir Seeds</p>
+      <p class="price">$119</p>
+      <p>Mexican landrace heirloom</p>
+      <button class="buy-btn" onclick="buy('Acapulco Gold $119')">Buy Now</button>
+    </div>
+
+    <div class="card">
+      <h2>Thai Stick (Chiange Mai)</h2>
+      <p>10 Regular Souvenir Seeds</p>
+      <p class="price">$129</p>
+      <p>Rare 1970s Thai sativa</p>
+      <button class="buy-btn" onclick="buy('Thai Stick $129')">Buy Now</button>
+    </div>
+
+    <div class="card">
+      <h2>Colombian Gold</h2>
+      <p>10 Regular Souvenir Seeds</p>
+      <p class="price">$99</p>
+      <p>Santa Marta mountains heirloom</p>
+      <button class="buy-btn" onclick="buy('Colombian Gold $99')">Buy Now</button>
+    </div>
+    <!-- Add as many as you want -->
+  </div>
+
+  <footer>
+    <p>Discreet worldwide shipping • Plain packaging • Free bonus souvenir seeds with every order</p>
+    <p>Payment: BTC • ETH • USDT • CashApp • Zelle • Venmo • PayPal F&F</p>
+    <p>Contact: orders@tokesreserve.com | Telegram @TokesReserve</p>
+    <p>© 2025 Tokes Reserve – Adult Novelty Souvenirs Only</p>
+  </footer>
+
+  <script>
+    function buy(strain) {
+      prompt(`Send payment for ${strain} to one of these:\n\n` +
+        `Bitcoin: bc1q...\n` +
+        `CashApp: $TokesReserve\n` +
+        `Zelle: orders@tokesreserve.com\n\n` +
+        `After payment, email receipt + shipping address to orders@tokesreserve.com`, "Paste receipt here");
+    }
+  </script>
+</body>
+</html>
